@@ -1,0 +1,22 @@
+[ req ]
+default_bits        = 2048
+prompt              = no
+default_md          = sha256
+req_extensions      = req_ext
+distinguished_name  = req_distinguished_name
+
+[ req_distinguished_name ]
+C  = CO
+ST = Cundinamarca
+L  = Bogotá
+O  = Bancopopular
+OU = Departamento de TI DevSecOPs
+CN = *.bancopopular.net
+
+[ req_ext ]
+subjectAltName = @alt_names
+
+[ alt_names ]
+DNS.1   = *.bancopopular.net
+DNS.2   = bancopopular.net
+
